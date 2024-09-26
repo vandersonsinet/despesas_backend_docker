@@ -61,7 +61,6 @@ def add_despesa(form: DespesaSchema):
 @app.get('/listarDespesas', tags=[despesa_tag],
          responses={"200": ListagemDespesasSchema, "404": ErrorSchema})
 def get_despesas():
-
     # criando conexão com a base
     session = Session()
     # fazendo a busca
